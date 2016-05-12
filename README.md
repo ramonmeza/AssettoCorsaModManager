@@ -13,7 +13,7 @@ Assetto Corsa Simple Mod manager is just that; a simple mod manager for Assetto 
 
 ## How to Use
 
-[![Video Tutorial](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+[![Video Tutorial](http://img.youtube.com/vi/_ReXox6It080.jpg)](http://www.youtube.com/watch?v=_ReXox6It08)
 
 *I highly suggest watching the video tutorial. It's just easier, in my opinion.*
 
