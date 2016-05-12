@@ -52,10 +52,12 @@
             this.howToUseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewSourceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TabGroup.SuspendLayout();
             this.tab_Cars.SuspendLayout();
             this.tab_Tracks.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_MainDirectory
@@ -261,36 +263,47 @@
             // howToUseToolStripMenuItem
             // 
             this.howToUseToolStripMenuItem.Name = "howToUseToolStripMenuItem";
-            this.howToUseToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.howToUseToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.howToUseToolStripMenuItem.Text = "How to Use";
             this.howToUseToolStripMenuItem.Click += new System.EventHandler(this.howToUseToolStripMenuItem_Click);
             // 
             // viewSourceToolStripMenuItem
             // 
             this.viewSourceToolStripMenuItem.Name = "viewSourceToolStripMenuItem";
-            this.viewSourceToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.viewSourceToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.viewSourceToolStripMenuItem.Text = "View Source";
             this.viewSourceToolStripMenuItem.Click += new System.EventHandler(this.viewSourceToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem1
             // 
             this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(138, 22);
             this.aboutToolStripMenuItem1.Text = "About";
             this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AssettoCorsaModManager.Properties.Resources.ACMM;
+            this.pictureBox1.Location = new System.Drawing.Point(566, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(201, 74);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
             // 
             // ModManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(809, 434);
+            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.TabGroup);
             this.Controls.Add(this.btn_Disable);
             this.Controls.Add(this.btn_Enable);
             this.Controls.Add(this.lbl_MainHeader);
             this.Controls.Add(this.btn_MainDirectory);
             this.Controls.Add(this.lbl_MainDirectory);
-            this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ModManager";
             this.Text = "Assetto Corsa Mod Manager";
@@ -303,6 +316,7 @@
             this.tab_Tracks.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,6 +348,7 @@
         private System.Windows.Forms.ToolStripMenuItem howToUseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem viewSourceToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
