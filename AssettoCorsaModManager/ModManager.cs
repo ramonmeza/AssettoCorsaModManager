@@ -206,7 +206,7 @@ namespace AssettoCorsaModManager
         // About
         private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Assetto Corsa Mod Manager v0.2\r\nMade by Ramon M.");
+            MessageBox.Show("Assetto Corsa Mod Manager v0.3\r\nMade by Ramon M.");
         }
 
         // How to use
@@ -232,6 +232,63 @@ namespace AssettoCorsaModManager
         {
             // Open to Github repo issue
             System.Diagnostics.Process.Start("https://github.com/ramonmeza/AssettoCorsaModManager/issues/new");
+        }
+
+        private void btn_CarsDisSelect_Click(object sender, EventArgs e)
+        {
+            // Select all from list_CarsDisabled
+            SetAllItems(list_CarsDisabled, true);
+        }
+
+        private void btn_CarsDisDeselect_Click(object sender, EventArgs e)
+        {
+            // Deselect all from list_CarsDisabled
+            SetAllItems(list_CarsDisabled, false);
+        }
+
+        private void btn_CarsEnSelect_Click(object sender, EventArgs e)
+        {
+            // Select all from list_CarsEnabled
+            SetAllItems(list_CarsEnabled, true);
+        }
+
+        private void btn_CarsEnDeselect_Click(object sender, EventArgs e)
+        {
+            // Deselect all from list_CarsEnabled
+            SetAllItems(list_CarsEnabled, false);
+        }
+
+        private void btn_TracksDisSelect_Click(object sender, EventArgs e)
+        {
+            // Select all from list_TracksDisabled
+            SetAllItems(list_TracksDisabled, true);
+        }
+
+        private void btn_TracksDisDeselect_Click(object sender, EventArgs e)
+        {
+            // Deselect all from list_TracksDisabled
+            SetAllItems(list_TracksDisabled, false);
+        }
+
+        private void btn_TracksEnSelect_Click(object sender, EventArgs e)
+        {
+            // Select all from list_TracksEnabled
+            SetAllItems(list_TracksEnabled, true);
+        }
+
+        private void btn_TracksEnDeselect_Click(object sender, EventArgs e)
+        {
+            // Deselect all from list_TracksEnabled
+            SetAllItems(list_TracksEnabled, false);
+        }
+
+        // Select All boxes
+        private void SetAllItems(CheckedListBox list, bool isChecked)
+        {
+            for(int i = 0; i < list.Items.Count; i++)
+            {
+                list.SetItemChecked(i, isChecked);
+            }
         }
     }
 }

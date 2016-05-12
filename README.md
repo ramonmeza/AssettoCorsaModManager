@@ -36,6 +36,17 @@ You can download the zip file containing the program by [clicking here](https://
 
 Please understand, this really is just a glorified file moving program. It literally works by taking the folders you put in the Mods folder and moving them to your Assetto Corsa folder. I made this program to abstract the work away from users, as well as make it easy to fix any problems you might have with modding Assetto Corsa. Please [open an issue](https://github.com/ramonmeza/AssettoCorsaModManager/issues/new) if you have any problems or recognize how I can make this better.
 
+## Changelog
+
+v0.3
+* Added select all and deselect all buttons
+
+v0.2
+* Added menu with links
+
+v0.1
+* Inital release
+
 ## Contributing
 
 Found a bug or have a feature suggestion? Please [open an issue](https://github.com/ramonmeza/AssettoCorsaModManager/issues/new) to tell me about it!

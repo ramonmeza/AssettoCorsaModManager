@@ -40,7 +40,15 @@
             this.list_CarsEnabled = new System.Windows.Forms.CheckedListBox();
             this.TabGroup = new System.Windows.Forms.TabControl();
             this.tab_Cars = new System.Windows.Forms.TabPage();
+            this.btn_CarsEnDeselect = new System.Windows.Forms.Button();
+            this.btn_CarsEnSelect = new System.Windows.Forms.Button();
+            this.btn_CarsDisDeselect = new System.Windows.Forms.Button();
+            this.btn_CarsDisSelect = new System.Windows.Forms.Button();
             this.tab_Tracks = new System.Windows.Forms.TabPage();
+            this.btn_TracksEnDeselect = new System.Windows.Forms.Button();
+            this.btn_TracksEnSelect = new System.Windows.Forms.Button();
+            this.btn_TracksDisDeselect = new System.Windows.Forms.Button();
+            this.btn_TracksDisSelect = new System.Windows.Forms.Button();
             this.list_TracksEnabled = new System.Windows.Forms.CheckedListBox();
             this.list_TracksDisabled = new System.Windows.Forms.CheckedListBox();
             this.lbl_TracksEnabled = new System.Windows.Forms.Label();
@@ -50,12 +58,12 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.howToUseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewSourceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportBugSuggestionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.viewSourceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportBugSuggestionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.TabGroup.SuspendLayout();
             this.tab_Cars.SuspendLayout();
             this.tab_Tracks.SuspendLayout();
@@ -119,7 +127,7 @@
             // 
             // btn_Enable
             // 
-            this.btn_Enable.Location = new System.Drawing.Point(138, 407);
+            this.btn_Enable.Location = new System.Drawing.Point(138, 443);
             this.btn_Enable.Name = "btn_Enable";
             this.btn_Enable.Size = new System.Drawing.Size(112, 23);
             this.btn_Enable.TabIndex = 9;
@@ -129,7 +137,7 @@
             // 
             // btn_Disable
             // 
-            this.btn_Disable.Location = new System.Drawing.Point(543, 407);
+            this.btn_Disable.Location = new System.Drawing.Point(543, 443);
             this.btn_Disable.Name = "btn_Disable";
             this.btn_Disable.Size = new System.Drawing.Size(112, 23);
             this.btn_Disable.TabIndex = 10;
@@ -160,11 +168,15 @@
             this.TabGroup.Location = new System.Drawing.Point(12, 81);
             this.TabGroup.Name = "TabGroup";
             this.TabGroup.SelectedIndex = 0;
-            this.TabGroup.Size = new System.Drawing.Size(785, 324);
+            this.TabGroup.Size = new System.Drawing.Size(785, 355);
             this.TabGroup.TabIndex = 14;
             // 
             // tab_Cars
             // 
+            this.tab_Cars.Controls.Add(this.btn_CarsEnDeselect);
+            this.tab_Cars.Controls.Add(this.btn_CarsEnSelect);
+            this.tab_Cars.Controls.Add(this.btn_CarsDisDeselect);
+            this.tab_Cars.Controls.Add(this.btn_CarsDisSelect);
             this.tab_Cars.Controls.Add(this.list_CarsEnabled);
             this.tab_Cars.Controls.Add(this.list_CarsDisabled);
             this.tab_Cars.Controls.Add(this.lbl_CarsEnabled);
@@ -172,13 +184,57 @@
             this.tab_Cars.Location = new System.Drawing.Point(4, 22);
             this.tab_Cars.Name = "tab_Cars";
             this.tab_Cars.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_Cars.Size = new System.Drawing.Size(777, 298);
+            this.tab_Cars.Size = new System.Drawing.Size(777, 346);
             this.tab_Cars.TabIndex = 1;
             this.tab_Cars.Text = "Cars";
             this.tab_Cars.UseVisualStyleBackColor = true;
             // 
+            // btn_CarsEnDeselect
+            // 
+            this.btn_CarsEnDeselect.Location = new System.Drawing.Point(483, 298);
+            this.btn_CarsEnDeselect.Name = "btn_CarsEnDeselect";
+            this.btn_CarsEnDeselect.Size = new System.Drawing.Size(75, 23);
+            this.btn_CarsEnDeselect.TabIndex = 17;
+            this.btn_CarsEnDeselect.Text = "Deselect All";
+            this.btn_CarsEnDeselect.UseVisualStyleBackColor = true;
+            this.btn_CarsEnDeselect.Click += new System.EventHandler(this.btn_CarsEnDeselect_Click);
+            // 
+            // btn_CarsEnSelect
+            // 
+            this.btn_CarsEnSelect.Location = new System.Drawing.Point(401, 298);
+            this.btn_CarsEnSelect.Name = "btn_CarsEnSelect";
+            this.btn_CarsEnSelect.Size = new System.Drawing.Size(75, 23);
+            this.btn_CarsEnSelect.TabIndex = 16;
+            this.btn_CarsEnSelect.Text = "Select All";
+            this.btn_CarsEnSelect.UseVisualStyleBackColor = true;
+            this.btn_CarsEnSelect.Click += new System.EventHandler(this.btn_CarsEnSelect_Click);
+            // 
+            // btn_CarsDisDeselect
+            // 
+            this.btn_CarsDisDeselect.Location = new System.Drawing.Point(92, 298);
+            this.btn_CarsDisDeselect.Name = "btn_CarsDisDeselect";
+            this.btn_CarsDisDeselect.Size = new System.Drawing.Size(75, 23);
+            this.btn_CarsDisDeselect.TabIndex = 15;
+            this.btn_CarsDisDeselect.Text = "Deselect All";
+            this.btn_CarsDisDeselect.UseVisualStyleBackColor = true;
+            this.btn_CarsDisDeselect.Click += new System.EventHandler(this.btn_CarsDisDeselect_Click);
+            // 
+            // btn_CarsDisSelect
+            // 
+            this.btn_CarsDisSelect.Location = new System.Drawing.Point(10, 298);
+            this.btn_CarsDisSelect.Name = "btn_CarsDisSelect";
+            this.btn_CarsDisSelect.Size = new System.Drawing.Size(75, 23);
+            this.btn_CarsDisSelect.TabIndex = 14;
+            this.btn_CarsDisSelect.Text = "Select All";
+            this.btn_CarsDisSelect.UseVisualStyleBackColor = true;
+            this.btn_CarsDisSelect.Click += new System.EventHandler(this.btn_CarsDisSelect_Click);
+            // 
             // tab_Tracks
             // 
+            this.tab_Tracks.Controls.Add(this.btn_TracksEnDeselect);
+            this.tab_Tracks.Controls.Add(this.btn_TracksEnSelect);
+            this.tab_Tracks.Controls.Add(this.btn_TracksDisDeselect);
+            this.tab_Tracks.Controls.Add(this.btn_TracksDisSelect);
             this.tab_Tracks.Controls.Add(this.list_TracksEnabled);
             this.tab_Tracks.Controls.Add(this.list_TracksDisabled);
             this.tab_Tracks.Controls.Add(this.lbl_TracksEnabled);
@@ -186,10 +242,50 @@
             this.tab_Tracks.Location = new System.Drawing.Point(4, 22);
             this.tab_Tracks.Name = "tab_Tracks";
             this.tab_Tracks.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_Tracks.Size = new System.Drawing.Size(777, 298);
+            this.tab_Tracks.Size = new System.Drawing.Size(777, 329);
             this.tab_Tracks.TabIndex = 0;
             this.tab_Tracks.Text = "Tracks";
             this.tab_Tracks.UseVisualStyleBackColor = true;
+            // 
+            // btn_TracksEnDeselect
+            // 
+            this.btn_TracksEnDeselect.Location = new System.Drawing.Point(483, 298);
+            this.btn_TracksEnDeselect.Name = "btn_TracksEnDeselect";
+            this.btn_TracksEnDeselect.Size = new System.Drawing.Size(75, 23);
+            this.btn_TracksEnDeselect.TabIndex = 21;
+            this.btn_TracksEnDeselect.Text = "Deselect All";
+            this.btn_TracksEnDeselect.UseVisualStyleBackColor = true;
+            this.btn_TracksEnDeselect.Click += new System.EventHandler(this.btn_TracksEnDeselect_Click);
+            // 
+            // btn_TracksEnSelect
+            // 
+            this.btn_TracksEnSelect.Location = new System.Drawing.Point(401, 298);
+            this.btn_TracksEnSelect.Name = "btn_TracksEnSelect";
+            this.btn_TracksEnSelect.Size = new System.Drawing.Size(75, 23);
+            this.btn_TracksEnSelect.TabIndex = 20;
+            this.btn_TracksEnSelect.Text = "Select All";
+            this.btn_TracksEnSelect.UseVisualStyleBackColor = true;
+            this.btn_TracksEnSelect.Click += new System.EventHandler(this.btn_TracksEnSelect_Click);
+            // 
+            // btn_TracksDisDeselect
+            // 
+            this.btn_TracksDisDeselect.Location = new System.Drawing.Point(92, 298);
+            this.btn_TracksDisDeselect.Name = "btn_TracksDisDeselect";
+            this.btn_TracksDisDeselect.Size = new System.Drawing.Size(75, 23);
+            this.btn_TracksDisDeselect.TabIndex = 19;
+            this.btn_TracksDisDeselect.Text = "Deselect All";
+            this.btn_TracksDisDeselect.UseVisualStyleBackColor = true;
+            this.btn_TracksDisDeselect.Click += new System.EventHandler(this.btn_TracksDisDeselect_Click);
+            // 
+            // btn_TracksDisSelect
+            // 
+            this.btn_TracksDisSelect.Location = new System.Drawing.Point(10, 298);
+            this.btn_TracksDisSelect.Name = "btn_TracksDisSelect";
+            this.btn_TracksDisSelect.Size = new System.Drawing.Size(75, 23);
+            this.btn_TracksDisSelect.TabIndex = 18;
+            this.btn_TracksDisSelect.Text = "Select All";
+            this.btn_TracksDisSelect.UseVisualStyleBackColor = true;
+            this.btn_TracksDisSelect.Click += new System.EventHandler(this.btn_TracksDisSelect_Click);
             // 
             // list_TracksEnabled
             // 
@@ -273,6 +369,11 @@
             this.howToUseToolStripMenuItem.Text = "How to Use";
             this.howToUseToolStripMenuItem.Click += new System.EventHandler(this.howToUseToolStripMenuItem_Click);
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(199, 6);
+            // 
             // viewSourceToolStripMenuItem
             // 
             this.viewSourceToolStripMenuItem.Name = "viewSourceToolStripMenuItem";
@@ -280,19 +381,24 @@
             this.viewSourceToolStripMenuItem.Text = "View Source";
             this.viewSourceToolStripMenuItem.Click += new System.EventHandler(this.viewSourceToolStripMenuItem_Click);
             // 
-            // aboutToolStripMenuItem1
-            // 
-            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(202, 22);
-            this.aboutToolStripMenuItem1.Text = "About";
-            this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
-            // 
             // reportBugSuggestionsToolStripMenuItem
             // 
             this.reportBugSuggestionsToolStripMenuItem.Name = "reportBugSuggestionsToolStripMenuItem";
             this.reportBugSuggestionsToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.reportBugSuggestionsToolStripMenuItem.Text = "Report Bug/Suggestions";
             this.reportBugSuggestionsToolStripMenuItem.Click += new System.EventHandler(this.reportBugSuggestionsToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(199, 6);
+            // 
+            // aboutToolStripMenuItem1
+            // 
+            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
+            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(202, 22);
+            this.aboutToolStripMenuItem1.Text = "About";
+            this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
             // 
             // pictureBox1
             // 
@@ -304,21 +410,11 @@
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(199, 6);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(199, 6);
-            // 
             // ModManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(809, 434);
+            this.ClientSize = new System.Drawing.Size(809, 476);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.TabGroup);
@@ -375,6 +471,14 @@
         private System.Windows.Forms.ToolStripMenuItem reportBugSuggestionsToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.Button btn_CarsEnDeselect;
+        private System.Windows.Forms.Button btn_CarsEnSelect;
+        private System.Windows.Forms.Button btn_CarsDisDeselect;
+        private System.Windows.Forms.Button btn_CarsDisSelect;
+        private System.Windows.Forms.Button btn_TracksEnDeselect;
+        private System.Windows.Forms.Button btn_TracksEnSelect;
+        private System.Windows.Forms.Button btn_TracksDisDeselect;
+        private System.Windows.Forms.Button btn_TracksDisSelect;
     }
 }
 
