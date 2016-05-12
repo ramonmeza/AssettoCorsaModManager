@@ -38,6 +38,10 @@ Please understand, this really is just a glorified file moving program. It liter
 
 ## Changelog
 
+v0.4
+* Disabled window resizing
+* Slight cosmetic changes
+
 v0.3
 * Added select all and deselect all buttons
 

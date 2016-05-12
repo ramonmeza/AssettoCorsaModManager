@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModManager));
             this.lbl_MainDirectory = new System.Windows.Forms.Label();
             this.btn_MainDirectory = new System.Windows.Forms.Button();
             this.dialog_MainDirectory = new System.Windows.Forms.FolderBrowserDialog();
@@ -184,7 +185,7 @@
             this.tab_Cars.Location = new System.Drawing.Point(4, 22);
             this.tab_Cars.Name = "tab_Cars";
             this.tab_Cars.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_Cars.Size = new System.Drawing.Size(777, 346);
+            this.tab_Cars.Size = new System.Drawing.Size(777, 329);
             this.tab_Cars.TabIndex = 1;
             this.tab_Cars.Text = "Cars";
             this.tab_Cars.UseVisualStyleBackColor = true;
@@ -345,7 +346,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -423,7 +424,10 @@
             this.Controls.Add(this.lbl_MainHeader);
             this.Controls.Add(this.btn_MainDirectory);
             this.Controls.Add(this.lbl_MainDirectory);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "ModManager";
             this.Text = "Assetto Corsa Mod Manager";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ModManager_FormClosing);
