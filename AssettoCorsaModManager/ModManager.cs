@@ -34,7 +34,7 @@ namespace AssettoCorsaModManager
                 string[] settings = (file.ReadToEnd()).Split(new string[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
 
                 // Set MainDirectory text
-                lbl_MainDirectory.Text = System.IO.Directory.Exists(settings[1]) ? settings[1] : "Not set";
+                lbl_MainDirectory.Text = (System.IO.Directory.Exists(settings[1]) && System.IO.File.Exists(settings[1] + "\\AssettoCorsa.exe")) ? settings[1] : "Not set";
 
                 // Set the enabled lists
                 // Get the cars index
@@ -206,7 +206,7 @@ namespace AssettoCorsaModManager
         // About
         private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Assetto Corsa Mod Manager v0.1\r\nMade by Ramon M.");
+            MessageBox.Show("Assetto Corsa Mod Manager v0.2\r\nMade by Ramon M.");
         }
 
         // How to use
@@ -226,6 +226,12 @@ namespace AssettoCorsaModManager
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void reportBugSuggestionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Open to Github repo issue
+            System.Diagnostics.Process.Start("https://github.com/ramonmeza/AssettoCorsaModManager/issues/new");
         }
     }
 }
