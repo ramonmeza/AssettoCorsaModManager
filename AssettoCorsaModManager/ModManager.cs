@@ -206,14 +206,14 @@ namespace AssettoCorsaModManager
         // About
         private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Assetto Corsa Mod Manager v0.3\r\nMade by Ramon M.");
+            MessageBox.Show("Assetto Corsa Mod Manager v0.4\r\nMade by Ramon M.");
         }
 
         // How to use
         private void howToUseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Open to Github How to Use section
-            System.Diagnostics.Process.Start("https://github.com/ramonmeza/AssettoCorsaModManager#howtouse");
+            System.Diagnostics.Process.Start("https://github.com/ramonmeza/AssettoCorsaModManager#how-to-use");
         }
         // View source code
         private void viewSourceToolStripMenuItem_Click(object sender, EventArgs e)

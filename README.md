@@ -39,6 +39,7 @@ Please understand, this really is just a glorified file moving program. It liter
 ## Changelog
 
 v0.4
+* Fixed How to Use link
 * Disabled window resizing
 * Slight cosmetic changes
 
