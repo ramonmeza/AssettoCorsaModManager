@@ -32,7 +32,6 @@ You can download the zip file containing the program by [clicking here](https://
 ## Known Problems
 
 * Saving happens when the program exits. This means if you force the program to terminate, using End Task, the settings wont save. If you enabled a mod and then force exit the program, there's no way of it knowing that mod ever existed. To fix this manually, just go into your Assetto Corsa folder and remove the mod manually.
-* Sometimes the Choose button won't open. No idea why, but restarting the program helps, or you can manually change the directory in the setting.sav file.
 
 Please understand, this really is just a glorified file moving program. It literally works by taking the folders you put in the Mods folder and moving them to your Assetto Corsa folder. I made this program to abstract the work away from users, as well as make it easy to fix any problems you might have with modding Assetto Corsa. Please [open an issue](https://github.com/ramonmeza/AssettoCorsaModManager/issues/new) if you have any problems or recognize how I can make this better.
 
