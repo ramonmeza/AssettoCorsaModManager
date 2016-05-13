@@ -424,7 +424,7 @@
             this.Controls.Add(this.lbl_MainHeader);
             this.Controls.Add(this.btn_MainDirectory);
             this.Controls.Add(this.lbl_MainDirectory);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;

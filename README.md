@@ -38,6 +38,10 @@ Please understand, this really is just a glorified file moving program. It liter
 
 ## Changelog
 
+v0.5
+* Fixed problem with Choose dialog not closing
+* Slight cosmetic changes
+
 v0.4
 * Fixed How to Use link
 * Disabled window resizing

@@ -113,15 +113,11 @@ namespace AssettoCorsaModManager
 
         private void btn_MainDirectory_Click(object sender, EventArgs e)
         {
-            // Make sure you have selected the correct directory
-            while (!System.IO.File.Exists(this.lbl_MainDirectory.Text + "\\AssettoCorsa.exe")) 
+            // Open folder dialog
+            if (dialog_MainDirectory.ShowDialog() == DialogResult.OK)
             {
-                // Open folder dialog
-                if (dialog_MainDirectory.ShowDialog() == DialogResult.OK && System.IO.File.Exists(dialog_MainDirectory.SelectedPath + "\\AssettoCorsa.exe"))
-                {
-                    // Change text
-                    this.lbl_MainDirectory.Text = dialog_MainDirectory.SelectedPath;
-                }
+                // Change text
+                this.lbl_MainDirectory.Text = (System.IO.File.Exists(dialog_MainDirectory.SelectedPath + "\\AssettoCorsa.exe")) ? dialog_MainDirectory.SelectedPath : "Not set";
             }
         }
 
@@ -206,7 +202,7 @@ namespace AssettoCorsaModManager
         // About
         private void aboutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Assetto Corsa Mod Manager v0.4\r\nMade by Ramon M.");
+            MessageBox.Show("Assetto Corsa Mod Manager v0.5\r\nMade by Ramon M.");
         }
 
         // How to use
